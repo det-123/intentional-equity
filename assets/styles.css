@@ -97,6 +97,7 @@ h1 {
   letter-spacing: -0.04em;
 }
 h2 {
+  text-wrap: balance;
   font-size: clamp(2rem, 4vw, 3rem);
   line-height: 1.08;
   letter-spacing: -0.03em;
@@ -441,6 +442,49 @@ section { padding: clamp(80px, 11vw, 136px) 0; }
 }
 .contact-email:hover { text-decoration-thickness: 3px; }
 
+/* ---------- Square motif ---------- */
+
+.motif {
+  position: relative;
+  background: var(--stone);
+  border-radius: 10px;
+}
+.motif::after {
+  content: "";
+  position: absolute;
+  left: var(--x, 85%);
+  top: var(--y, 85%);
+  width: var(--sq, 11%);
+  aspect-ratio: 1;
+  background: var(--terracotta);
+  transform: translate(-50%, -50%);
+}
+.motif-light { background: var(--bg); }
+.motif-wide { aspect-ratio: 16 / 9; --sq: 7%; }
+.motif-tall { aspect-ratio: 4 / 5; margin-top: 40px; max-width: 360px; --sq: 12%; }
+.motif-step { aspect-ratio: 4 / 3; margin-bottom: 20px; --sq: 13%; }
+.motif-contact { aspect-ratio: 1; --sq: 12%; }
+
+.head-with-art {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  gap: clamp(40px, 6vw, 96px);
+  align-items: start;
+  margin-bottom: clamp(48px, 6vw, 72px);
+}
+.head-with-art .section-head { margin-bottom: 0; }
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+  gap: clamp(40px, 6vw, 96px);
+  align-items: center;
+}
+.contact-grid .motif-contact { max-width: 340px; justify-self: end; width: 100%; }
+
+.process li { display: flex; flex-direction: column; }
+.process .motif-step { order: -1; }
+
 /* ---------- Footer ---------- */
 
 .site-footer {
@@ -487,7 +531,10 @@ section { padding: clamp(80px, 11vw, 136px) 0; }
   .site-nav li:not(:last-child) { display: none; }
   .hero-grid { grid-template-columns: 1fr; }
   .hero-visual { aspect-ratio: 16 / 7; }
-  .service, .clients-grid, .about-grid { grid-template-columns: 1fr; }
+  .service, .clients-grid, .about-grid, .head-with-art, .contact-grid { grid-template-columns: 1fr; }
+  .motif-wide { aspect-ratio: 16 / 6; }
+  .motif-tall { display: none; }
+  .contact-grid .motif-contact { justify-self: start; max-width: none; aspect-ratio: 16 / 6; }
   .process { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px 32px; }
 }
 
