@@ -30,7 +30,6 @@
     "name": "Intentional Equity, LLC",
     "url": "https://intentional-equity.com/",
     "logo": "https://intentional-equity.com/assets/logo/intentional-equity-logo.png",
-    "email": "hello@intentional-equity.com",
     "description": "Boutique HR consultancy providing HR function optimization, HR team development, HR compliance, fractional HR leadership, and workplace equity services.",
     "foundingDate": "2023",
     "address": {
@@ -74,7 +73,7 @@
             <h1 id="hero-title"><span>Stronger HR.</span> <span>Fewer surprises.</span></h1>
             <p class="lede">Intentional Equity partners with organizations to assess how HR work gets done, strengthen the people and processes behind it, and keep compliance on solid ground. We work alongside leadership and in-house HR teams through defined projects, ongoing advisory support, and fractional HR leadership.</p>
             <div class="hero-actions">
-              <a class="btn btn-primary" href="mailto:hello@intentional-equity.com?subject=Inquiry%20from%20intentional-equity.com">Email us</a>
+              <a class="btn btn-primary js-email" href="#contact" data-subject="Inquiry from intentional-equity.com">Email us</a>
               <a class="btn btn-ghost" href="#services">Explore our services</a>
             </div>
           </div>
@@ -295,7 +294,7 @@
         <div>
           <h2 id="contact-title">Tell us what you are working on.</h2>
           <p>Send a short note about your organization and what you need. We will reply to arrange an introductory conversation.</p>
-          <a class="contact-email" href="mailto:hello@intentional-equity.com?subject=Inquiry%20from%20intentional-equity.com">hello@intentional-equity.com</a>
+          <a class="contact-email js-email" href="#contact" data-subject="Inquiry from intentional-equity.com" data-show-address>hello [at] intentional-equity.com</a>
         </div>
         <div class="motif motif-light motif-contact" style="--x: 16%; --y: 84%;" aria-hidden="true"></div>
       </div>
@@ -311,7 +310,7 @@
           <span class="logo-tag">Human Resources Consulting</span>
         </a>
         <ul class="footer-links">
-          <li><a href="mailto:hello@intentional-equity.com">hello@intentional-equity.com</a></li>
+          <li><a class="js-email" href="#" data-show-address>hello [at] intentional-equity.com</a></li>
           <li><a href="privacy.html">Privacy Policy</a></li>
           <li><a href="terms.html">Terms of Use</a></li>
         </ul>
@@ -327,5 +326,6 @@
       if (y) { y.textContent = new Date().getFullYear(); }
     })();
   </script>
+  <script src="assets/email.js"></script>
 </body>
 </html>
